@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* Reset */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	i,
+	em {
+		font-style: normal;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	img {
+		border: 0;
+		vertical-align: middle;
+	}
+
+	button {
+		cursor: pointer;
+	}
+
+	a {
+		color: #232321;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #6190e8;
+	}
+
+	input,
+	button {
+		font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+	}
+
+	body {
+		background-color: #f6f6f6;
+		font-size: 12px;
+		line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+		color: #232321;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+/* 便捷类名 */
+	.hide,
+	.none {
+		display: none;
+	}
+
+	.clearfix:after,
+	.row:after {
+		visibility: hidden;
+		clear: both;
+		display: block;
+		content: ".";
+		height: 0;
+	}
+
+	.clearfix {
+		*zoom: 1;
+	}
+
+
+/* ICONFONT */
+
+
+/* 基础组件 */
+	.mod_price {
+		font-size: 14px;
+		color: #F10214;
+	}
+
+	.mod_price i {
+		margin-right: 3px;
+		font-family: arial;
+		font-weight: normal;
+		font-size: 12px;
+	}
+
+/* 基础布局 */
+	.o2_wide{
+		min-width: 1190px;
+	}
+
+	.o2_mini{
+		min-width: 990px;
+	}
+
+	.grid_c1,
+	.grid_md6 {
+		margin: 0 auto;
+		width: 1190px;
+	}
+
+	.row {
+		width: 1200px;
+		margin-right: -10px;
+	}
+
+	.gird_md5,
+	.grid_md4,
+	.grid_md3,
+	.grid_md2,
+	.grid_md1 {
+		float: left;
+		margin-right: 10px;
+	}
+
+	.grid_md5 {
+		width: 900px;
+	}
+
+	.grid_md4 {
+		width: 790px;
+	}
+
+	.grid_c2,
+	.grid_md3 {
+		width: 590px;
+	}
+
+	.grid_c3,
+	.grid_md2 {
+		width: 390px;
+	}
+
+	.grid_c6,
+	.grid_md1 {
+		width: 190px;
+	}
+
+	.o2_mini .grid_c1,
+	.o2_mini .grid_md6 {
+		width: 990px;
+	}
+
+	.o2_mini .row {
+		width: 996px;
+		margin-right: -6px;
+	}
+
+	.o2_mini .gird_md5,
+	.o2_mini .grid_md4,
+	.o2_mini .grid_md3,
+	.o2_mini .grid_md2,
+	.o2_mini .grid_md1 {
+		margin-right: 6px;
+	}
+
+	.o2_mini .grid_md5 {
+		width: 824px;
+	}
+
+	.o2_mini .grid_md4 {
+		width: 658px;
+	}
+
+	.o2_mini .grid_c2,
+	.o2_mini .grid_md3 {
+		width: 492px;
+	}
+
+	.o2_mini .grid_c3,
+	.o2_mini .grid_md2 {
+		width: 326px;
+	}
+
+	.o2_mini .grid_c6,
+	.o2_mini .grid_md1 {
+		width: 160px;
+	}
+
+/* 垂直居中 */
+	.mod_ver {
+		display: inline-block;
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+		font-size: 0;
+	}
+
+	/*隐藏SVG容器*/
+	.svgcont {
+		position: absolute;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+.mod_lazyload_placeholder {
+  width: 100%;
+  background-color: #eee;
+}

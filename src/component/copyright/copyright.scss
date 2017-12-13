@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.copyright {
+  border-top: 1px solid #e3e6e9;
+  background-color: #fff;
+  padding: 40px 0 30px;
+  color: #6190e8;
+  &_aotuicon {
+    width: 200px;
+    height: 50px;
+    float: left;
+    background-image: url('../../static/images/icons/icon_aotu.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &_githubicon {
+    width: 42px;
+    height: 42px;
+    float: right;
+    cursor: pointer;
+    background-image: url('../../static/images/icons/icon_githubf.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-top: -56px;
+    a {
+      width: 42px;
+      height: 42px;
+      display: inline-block;
+    }
+  }
+  a {
+    color: #6190e8;
+  }
+  p {
+    line-height: 2;
+    clear: left;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+}

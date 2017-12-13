@@ -1,0 +1,28 @@
+{
+  "name": "nerv-webside",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "nervjs": "0.4.0-beta.2f8d24b1",
+    "react-highlight": "^0.10.0",
+    "react-highlight.js": "^1.0.7",
+    "react-hljs": "^1.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-syntax-highlighter": "^6.0.4"
+  },
+  "scripts": {
+    "test": "",
+    "eslint": "eslint */component */page"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-jsx": "^4.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

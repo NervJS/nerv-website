@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+body {
+  min-width: 1190px;
+  overflow-x: scroll;
+  background: #fff !important;
+}

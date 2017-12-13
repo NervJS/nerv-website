@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.toast {
+  width: 180px;
+  padding: 30px 0;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  /* bottom: 0; */
+  margin: auto;
+  z-index: 100;
+  transform: translateY(-50%);
+  animation: showDown 1.6s ease;
+  &.hide {
+    display: none;
+  }
+}
+
+@keyframes showDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}

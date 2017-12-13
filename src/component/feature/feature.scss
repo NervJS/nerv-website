@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.feature {
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  &_main {
+    width: 100%;
+    margin-top: 60px;
+    div {
+      width: 33%;
+      height: 240px;
+      // border: 1px solid red;
+      float: left;
+      box-sizing: border-box;
+      padding: 25px 50px;
+      border-radius: 6px;
+      margin-bottom: 50px;
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow: 0 5px 25px #eceef0;
+      }
+    }
+    h3 {
+      text-align: center;
+      color: #2C405A;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 40px;
+      p {
+        font-weight: 600;
+        margin-top: -10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &_icon {
+    background-size: 45% auto;
+
+    &_tiny {
+      background-image: url('../../static/images/icons/icon_tiny.png');
+      background-repeat: no-repeat;
+    }
+    &_faster {
+      // width: 48px;
+      background-image: url('../../static/images/icons/icon_faster.png');
+      background-repeat: no-repeat;
+    }
+    &_virtual {
+      background-image: url('../../static/images/icons/icon_virtual.png');
+      background-repeat: no-repeat;
+      background-size: 50% auto;
+    }
+    &_types {
+      background-image: url('../../static/images/icons/icon_types.png');
+      background-repeat: no-repeat;
+    }
+    &_ie {
+      // width: 45px;
+      background-image: url('../../static/images/icons/icon_ie.png');
+      background-repeat: no-repeat;
+      background-size: 50% auto;
+    }
+    &_tool {
+      // width: 45px;
+      background-image: url('../../static/images/icons/icon_tool.png');
+      background-repeat: no-repeat;
+    }
+    height: 60px;
+    // float: left;
+    margin-right: 10px;
+    display: inline-block;
+    background-position: center;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+  }
+  &_desc {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+  }
+}
