@@ -29,11 +29,11 @@ class Feature extends Nerv.Component {
               <p className='feature_desc'>高效、同步的 diff 算法和诸多优化策略使得 Nerv 成为性能最高的前端框架之一</p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_virtual'></span><p>无缝兼容React</p></h3>
+              <h3><span className='feature_icon feature_icon_virtual'></span><p>完备的生态</p></h3>
               <p className='feature_desc'>无需 nerv-compat，只需要在稍稍设置就能享受整个 React 生态的共同成果</p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_types'></span><p>同构</p></h3>
+              <h3><span className='feature_icon feature_icon_types'></span><p>更一致的渲染</p></h3>
               <p className='feature_desc'>不仅在浏览器上能高效地渲染，在服务器上 Nerv 同样能高效地运行</p>
             </div>
             <div>
@@ -41,7 +41,7 @@ class Feature extends Nerv.Component {
               <p className='feature_desc'>和大多数现代框架不同，Nerv 将继续保持对 IE8 的兼容</p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_tool'></span><p>战斗洗礼</p></h3>
+              <h3><span className='feature_icon feature_icon_tool'></span><p>更具说服力的案例</p></h3>
               <p className='feature_desc'>不管是京东首页的高流量，还是 Toplife 的复杂业务，Nerv 都经受住了来自于真实业务的考验</p>
             </div>
           </div>

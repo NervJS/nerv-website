@@ -6,6 +6,7 @@
 import Nerv from 'nervjs'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import Toast from '../toast/toast'
+import Video from '../video/video'
 import { androidstudio } from 'react-syntax-highlighter/styles/hljs'
 import './banner.scss'
 
@@ -13,7 +14,8 @@ class Banner extends Nerv.Component {
   constructor () {
     super(...arguments)
     this.state = {
-      tip: false
+      tip: false,
+      play: false
     }
   }
 
@@ -29,12 +31,30 @@ class Banner extends Nerv.Component {
     }, 1600)
   }
 
+  playVideo = () => {
+    if (!this.state.play)
+      this.setState({
+        play: true
+      })
+  }
+
+  stopVideo = () => {
+    if (this.state.play)
+      this.setState({
+        play: false
+      })
+  }
+
   render () {
     return (
       <div className='banner'>
         <div className='banner_main'>
           <Toast show={this.state.tip}/>
-          <h1 className='banner_tit'>Hi, I am Nerv</h1>
+          <Video
+            play={this.state.play}
+            pause={this.stopVideo}
+          />
+          <h1 className='banner_tit'>Hi, I am Nerv <span onClick={this.playVideo} className='banner_play_btn'></span></h1>
           <h2 className='banner_desc'>一个基于 Virtual DOM 的类 React 组件框架</h2>
           <div className='banner_btns'>
             <a className='toDoc' onClick={this.showTip} href="javascript:void(0)">起步</a>

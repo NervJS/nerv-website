@@ -49,10 +49,10 @@
 
 
 /* 便捷类名 */
-	.hide,
+	/*.hide,
 	.none {
 		display: none;
-	}
+	}*/
 
 	.clearfix:after,
 	.row:after {
