@@ -13,15 +13,11 @@ class Video extends Nerv.Component {
     }
   }
 
-  componentDidMount () {
-
-  }
-
   render () {
     const {play, pause} = this.props
     const video = this.refs.video
-    let body = document.getElementsByTagName('body')[0],
-        html = document.getElementsByTagName('html')[0]
+    let body = document.getElementsByTagName('body')[0]
+    let html = document.getElementsByTagName('html')[0]
     if (play) {
       if (video) {
         video.play()
@@ -34,11 +30,11 @@ class Video extends Nerv.Component {
     }
     return (
       <div className={play ? 'video' : 'video hide'}>
-        <video src='http://storage.jd.com/index/nerv_720p.mp4' ref='video' preload="auto"></video>
-        <span className='video_close' onClick={pause}></span>
+        <video src='http://storage.jd.com/index/nerv_720p.mp4' ref='video' preload='auto' />
+        <span className='video_close' onClick={pause} />
       </div>
     )
   }
 }
 
-module.exports = Video
+export default Video

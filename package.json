@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "nervjs": "0.4.0-beta.2f8d24b1",
+    "nervjs": "^1.2.2",
     "react-highlight": "^0.10.0",
     "react-highlight.js": "^1.0.7",
     "react-hljs": "^1.0.0",
@@ -11,8 +11,15 @@
     "react-syntax-highlighter": "^6.0.4"
   },
   "scripts": {
-    "test": "",
-    "eslint": "eslint */component */page"
+    "precommit": "lint-staged",
+    "eslint": "eslint src config",
+    "eslint:fix": "eslint src config --fix"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -23,6 +30,8 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0"
   }
 }

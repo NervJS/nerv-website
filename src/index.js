@@ -24,8 +24,8 @@ class App extends Nerv.Component {
   render () {
     return (
       <div className='main'>
-        <Nav/>
-        <Home/>
+        <Nav />
+        <Home />
       </div>
     )
   }

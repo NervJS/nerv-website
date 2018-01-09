@@ -24,7 +24,7 @@ class Compare extends Nerv.Component {
             {name: 'Nerv', val: 1.06, nerv: true},
             {name: 'Vue 2.4.4', val: 1.25},
             {name: 'Anu', val: 1.47},
-            {name: 'React-lite', val: 2.33},
+            {name: 'React-lite', val: 2.33}
           ],
           yItem: {
             max: 2.5,
@@ -43,7 +43,7 @@ class Compare extends Nerv.Component {
             {name: 'Nerv', val: 1.14, nerv: true},
             {name: 'Vue 2.4.4', val: 1.22},
             {name: 'Anu', val: 1.28},
-            {name: 'React-lite', val: 1.5},
+            {name: 'React-lite', val: 1.5}
           ],
           yItem: {
             max: 1.6,
@@ -61,7 +61,7 @@ class Compare extends Nerv.Component {
             {name: 'React 16.0', val: 1.47},
             {name: 'Nerv', val: 1.1, nerv: true},
             {name: 'Anu', val: 1.98},
-            {name: 'React-lite', val: 2.14},
+            {name: 'React-lite', val: 2.14}
           ],
           yItem: {
             max: 2.5,
@@ -80,7 +80,7 @@ class Compare extends Nerv.Component {
             {name: 'Nerv', val: 160, nerv: true},
             {name: 'Vue', val: 100},
             {name: 'Anu', val: 85},
-            {name: 'React-lite', val: 68},
+            {name: 'React-lite', val: 68}
           ],
           yItem: {
             max: 160,
@@ -115,19 +115,19 @@ class Compare extends Nerv.Component {
     return (
       <div className='compare'>
         <div className='grid_c1'>
-          <CpTitle data={'性能 Benchmarks'}/>
+          <CpTitle data={'性能 Benchmarks'} />
           <div className='compare_box'>
             <ul className='compare_select'>
-              <li key='0' className='current' onClick={() => {this.setCurrentIdx(0)}}>
+              <li key='0' className='current' onClick={() => { this.setCurrentIdx(0) }}>
                 <span className='compare_js'>JS Framework</span>
               </li>
-              <li key='1' onClick={() => {this.setCurrentIdx(1)}}>
+              <li key='1' onClick={() => { this.setCurrentIdx(1) }}>
                 <span className='compare_mu'>Memory usage</span>
               </li>
-              <li key='2' onClick={() => {this.setCurrentIdx(2)}}>
+              <li key='2' onClick={() => { this.setCurrentIdx(2) }}>
                 <span className='compare_ui'>UI Bench</span>
               </li>
-              <li key='3' onClick={() => {this.setCurrentIdx(3)}}>
+              <li key='3' onClick={() => { this.setCurrentIdx(3) }}>
                 <span className='compare_db'>DB Monster (fps)</span>
               </li>
             </ul>
