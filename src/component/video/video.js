@@ -7,12 +7,6 @@ import Nerv from 'nervjs'
 import './video.scss'
 
 class Video extends Nerv.Component {
-  constructor () {
-    super(...arguments)
-    this.state = {
-    }
-  }
-
   render () {
     const {play, pause} = this.props
     const video = this.refs.video
