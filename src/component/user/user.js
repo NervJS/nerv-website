@@ -19,17 +19,17 @@ class User extends Nerv.Component {
     return (
       <div className='user'>
         <div className='grid_c1'>
-          <CpTitle data={'使用者 Users'}/>
+          <CpTitle data={'使用者 Users'} />
           <div className='user_main'>
             <div className='user_wrap'>
               <div className='user_card'>
-                <a href="http://jd.com/" className='user_card_img' target='_blank'></a>
+                <a href='http://jd.com/' className='user_card_img' target='_blank' />
                 <span className='user_desc'>京东首页及核心频道</span>
               </div>
             </div>
             <div className='user_wrap'>
               <div className='user_card'>
-                <a href="http://www.toplife.com/" className='user_card_img' target='_blank'></a>
+                <a href='http://www.toplife.com/' className='user_card_img' target='_blank' />
                 <span className='user_desc'>奢侈品项目全站</span>
               </div>
             </div>

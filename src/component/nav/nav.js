@@ -52,13 +52,13 @@ class Nav extends Nerv.Component {
     const {overbanner} = this.state
     return (
       <div className={overbanner ? 'nav_overbanner nav' : 'nav'}>
-        <Toast show={this.state.tip}/>
+        <Toast show={this.state.tip} />
         <div className='grid_c1'>
-          <span className='nav_logo'></span>
+          <span className='nav_logo' />
           <ul className='nav_content'>
-            <li><a href="javascript:void(0)">首页</a></li>
-            <li><a href="https://nervjs.github.io/docs/" target='_blank'>文档</a></li>
-            <li><a href="https://github.com/NervJS/nerv" target='_blank'>Github</a></li>
+            <li><a href='javascript:void(0)'>首页</a></li>
+            <li><a href='https://nervjs.github.io/docs'>文档</a></li>
+            <li><a href='https://github.com/NervJS/nerv' target='_blank'>Github</a></li>
             <li className='nav_switch'>
               <span className='nav_switch_hide'>中</span>
               <span onClick={this.showTip} className='nav_switch_show'>En</span>
@@ -70,4 +70,4 @@ class Nav extends Nerv.Component {
   }
 }
 
-module.exports = Nav
+export default Nav

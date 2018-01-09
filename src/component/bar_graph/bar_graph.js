@@ -17,7 +17,7 @@ class BarGraph extends Nerv.Component {
         {name: 'Nerv', val: 1.06, nerv: true},
         {name: 'Vue 2.4.4', val: 1.25},
         {name: 'Anu', val: 1.47},
-        {name: 'React-lite', val: 2.33},
+        {name: 'React-lite', val: 2.33}
       ],
       yItem: {
         max: 2.5,
@@ -32,15 +32,15 @@ class BarGraph extends Nerv.Component {
     let component = (yItem.max - yItem.min) / (yItem.slice - 1)
     const xitems = xItem.map((item) => {
       return (
-        <li className='bar_axis_x_item' style={{height: `${(item.val-yItem.min)/component*100}px`}}>
+        <li className='bar_axis_x_item' style={{height: `${(item.val - yItem.min) / component * 100}px`}}>
           <span className='bar_axis_name'>{item.name}</span>
-          <span className={item.nerv ? 'bar_axis_bar nerv' : 'bar_axis_bar'}></span>
+          <span className={item.nerv ? 'bar_axis_bar nerv' : 'bar_axis_bar'} />
         </li>
       )
     })
     let yitemsVal = []
-    for (let i=0, len=yItem.slice; i<len; i++) {
-      let curVal = (component*i+yItem.min).toString().indexOf('.') !== -1 ? (component*i+yItem.min).toFixed(1) : component*i+yItem.min
+    for (let i = 0, len = yItem.slice; i < len; i++) {
+      let curVal = (component * i + yItem.min).toString().indexOf('.') !== -1 ? (component * i + yItem.min).toFixed(1) : component * i + yItem.min
       // curVal.toString().indexOf('.') !== -1
       yitemsVal.push(curVal)
     }
@@ -57,7 +57,7 @@ class BarGraph extends Nerv.Component {
         </div>
         <div className='bar_graph_desc'>
           <p>{desc}</p>
-        <a className='bar_graph_btn' href={more} target="_blank">了解更多</a>
+          <a className='bar_graph_btn' href={more} target='_blank'>了解更多</a>
         </div>
       </div>
     )

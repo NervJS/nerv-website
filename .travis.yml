@@ -1,0 +1,26 @@
+language: node_js
+sudo: false
+node_js:
+- '8'
+cache:
+  apt: true
+  directories:
+  - node_modules
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+  ssh_known_hosts: github.com
+install:
+- npm install -g athena2
+- npm install
+script:
+- ath2 build
+- npm run deploy "${TRAVIS_PULL_REQUEST}"
+env:
+  global:
+  - CXX: g++-4.8
+  - GH_REF: github.com/NervJS/nerv-website.git
+  - secure: yQvxtOx7FG727xgeenjWOmsX0r74PZh9QJb8Qtm4+9P304y30NAIcc4bqXF5xppfYv+6ENLvricjZZVf/kieqL2y5Zvm2KDb/g+rvqPQ0rsNW/+f4lg03wGkrwUNIGIZP7Lgnn32CtmkB2HLPOSC/RhduFcoN4Fy83Sg5frec4MOt0IVhFaf48jpff3KCb85Jnjp3lPSTRXEhtmZohJPHfpmb62lbZsfvWWwD33lpM9BHg+cNbeIiUg2uoJ8xfztP3FdUlFyeUnIhOO7hFfTZDsWjEP+QMwTScVJjl9hOek/Qry1Ltkcjil1gUOUWDWDX/EbhTdk9vZ3djvV8seaXgsBFC+KzQpnavQ/7qwhgjmuXcSLz3mv3AxTxCZABJxgKEsWcVs7HA7O310FS8FkQuFIiCUUihyHaO1jMtPotm7p8Xe8fcLIxW+hRiweHL3IeGOMtbgE58mKhhf5Omkw8xveG/G1h1gEupIcG6Q8MfWuNADf3zrXRetLO/OS47vIei+/Rtix38dummaxpaz66sHwPjNy+xrqjOxVRTsoY99OOe+XdHyGufrKkQOB1smVxH/E9kfkBvPd0oXdVOx5ApDvWlQQp25sgGMjweCsWkSUrGj2Z8uD1FBFmKb9XDeu/cRUE3ItQxCZyZRn3eY40jYCbdbnvbbiyDZEgr/X36U=

@@ -13,8 +13,7 @@ class Doc extends Nerv.Component {
 
   render () {
     return (
-      <div className='doc'>
-      </div>
+      <div className='doc' />
     )
   }
 }

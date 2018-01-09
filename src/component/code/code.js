@@ -156,7 +156,7 @@ export default TodoList`
     const {currentIdx} = this.state
     return (
       <div className='code'>
-        <CpTitle data={'代码示例 Examples'}/>
+        <CpTitle data={'代码示例 Examples'} />
         <div className='code_examples'>
           <div className={currentIdx === 0 ? 'code_wrap show' : 'code_wrap'}>
             <SyntaxHighlighter
@@ -168,7 +168,7 @@ export default TodoList`
               style={dracula}>
               {codeString}
             </SyntaxHighlighter>
-            <div className='code_result'><Counter/></div>
+            <div className='code_result'><Counter /></div>
           </div>
           <div className={currentIdx === 1 ? 'code_wrap show' : 'code_wrap'}>
             <SyntaxHighlighter
@@ -180,12 +180,12 @@ export default TodoList`
               style={dracula}>
               {codeString2}
             </SyntaxHighlighter>
-            <div className='code_result'><TodoList/></div>
+            <div className='code_result'><TodoList /></div>
           </div>
         </div>
         <ul className='code_switch'>
-          <li className='current' onClick={() => {this.switchCode(0)}}></li>
-          <li onClick={() => {this.switchCode(1)}}></li>
+          <li className='current' onClick={() => { this.switchCode(0) }} />
+          <li onClick={() => { this.switchCode(1) }} />
         </ul>
       </div>
     )

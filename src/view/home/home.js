@@ -23,12 +23,12 @@ class Home extends Nerv.Component {
   render () {
     return (
       <div className='home'>
-        <Banner/>
-        <Feature/>
-        <Compare/>
-        <Code/>
-        <User/>
-        <Copyright/>
+        <Banner />
+        <Feature />
+        <Compare />
+        <Code />
+        <User />
+        <Copyright />
       </div>
     )
   }

@@ -16,9 +16,9 @@ class Copyright extends Nerv.Component {
     return (
       <div className='copyright'>
         <div className='grid_c1'>
-          <div className='copyright_aotuicon'></div>
-          <p>© 2017 Created by <a href="https://aotu.io/" target="_blank">凹凸实验室</a></p>
-          <div className='copyright_githubicon'><a href="https://github.com/o2team/o2team.github.io" target="_blank"></a></div>
+          <div className='copyright_aotuicon' />
+          <p>© 2017 Created by <a href='https://aotu.io/' target='_blank'>凹凸实验室</a></p>
+          <div className='copyright_githubicon'><a href='https://github.com/o2team/o2team.github.io' target='_blank' /></div>
         </div>
       </div>
     )
