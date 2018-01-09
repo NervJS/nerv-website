@@ -69,7 +69,7 @@ class Compare extends Nerv.Component {
             slice: 4
           },
           more: 'https://github.com/localvoid/uibench',
-          desc: '本例子使用UI Benchmark对比若干JS框架的渲染速度，相同测试用例下，nerv的渲染速度最低。'
+          desc: '本例子使用UI Benchmark对比若干JS框架的渲染速度，相同测试用例下，nerv的渲染耗时最短。'
         },
         // fps
         {
