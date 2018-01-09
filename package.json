@@ -13,7 +13,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "eslint": "eslint src config",
-    "eslint:fix": "eslint src config --fix"
+    "eslint:fix": "eslint src config --fix",
+    "deploy": "sh ./deploy.sh"
   },
   "lint-staged": {
     "*.js": [
