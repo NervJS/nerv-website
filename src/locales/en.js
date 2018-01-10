@@ -2,7 +2,7 @@ export default {
   home: 'Home',
   docs: 'Docs',
   banner_desc:
-    'A blazing fast React alternative, compatiable with IE8 and React 16.',
+    'A blazing fast React alternative, compatible with IE8 and React 16.',
   getting_started: 'Getting started',
   features: 'Features',
   benchmarks: 'Benchmarks',
