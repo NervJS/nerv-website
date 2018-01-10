@@ -6,6 +6,8 @@
 import Nerv from 'nervjs'
 import { FormattedMessage } from 'react-intl'
 import Toast from '../toast/toast'
+import { isLocaleChinese } from '../../util'
+import { setLanguage } from '../../app'
 import './nav.scss'
 
 class Nav extends Nerv.Component {
@@ -49,8 +51,13 @@ class Nav extends Nerv.Component {
     }, 1600)
   }
 
+  setLanguage = locale => () => {
+    setLanguage(locale)
+  }
+
   render () {
     const { overbanner } = this.state
+    const isCN = isLocaleChinese.call(this)
     return (
       <div className={overbanner ? 'nav_overbanner nav' : 'nav'}>
         <Toast show={this.state.tip} />
@@ -59,13 +66,17 @@ class Nav extends Nerv.Component {
           <ul className='nav_content'>
             <li>
               <a href='javascript:void(0)'>
-                <FormattedMessage
-                  id='home'
-                />
+                <FormattedMessage id='home' />
               </a>
             </li>
             <li>
-              <a href='https://nervjs.github.io/docs'>
+              <a
+                href={
+                  isCN
+                    ? 'https://nervjs.github.io/docs'
+                    : 'https://github.com/NervJS/nerv'
+                }
+              >
                 <FormattedMessage id='docs' />
               </a>
             </li>
@@ -75,8 +86,16 @@ class Nav extends Nerv.Component {
               </a>
             </li>
             <li className='nav_switch'>
-              <span className='nav_switch_hide'>中</span>
-              <span onClick={this.showTip} className='nav_switch_show'>
+              <span
+                className={`nav_switch_${isCN ? 'hide' : 'show'}`}
+                onClick={this.setLanguage('zh')}
+              >
+                中
+              </span>
+              <span
+                className={`nav_switch_${!isCN ? 'hide' : 'show'}`}
+                onClick={this.setLanguage('en')}
+              >
                 En
               </span>
             </li>

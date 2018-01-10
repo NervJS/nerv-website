@@ -3,5 +3,5 @@ export function isLocaleEnglish () {
 }
 
 export function isLocaleChinese () {
-  return this.context.intl.locale === 'zh'
+  return this.context.intl.locale === 'zh-CN'
 }
