@@ -22,7 +22,8 @@ export default {
   compat_desc: 'Nerv supports both Internet Explorer 8 and React 16 features.',
   battle: 'Battle-tested',
   battle_desc:
-    'We already use Nerv in real world scenarios: JD.com, which serve millions user per day.',
+    'We already use Nerv in real world scenarios: <a href="https://jd.com">JD.com</a>, which serve millions user per day.',
+
   js_framework:
     'The JS web frameworks benchmark is a simple benchmark, comparing various typical app operations for several JavaScript frameworks. The benchmarks creates a large table with randomized entries and measures the time for various operations.',
   memory: 'The memory usege is part of JS web frameworks benchmark.',

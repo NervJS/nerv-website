@@ -4,7 +4,7 @@
  * @desc
  */
 import Nerv from 'nervjs'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import './feature.scss'
 
 import CpTitle from '../cp_title/cp_title'
@@ -84,7 +84,7 @@ class Feature extends Nerv.Component {
                 </p>
               </h3>
               <p className='feature_desc'>
-                <FormattedMessage id='battle_desc' />
+                <FormattedHTMLMessage id='battle_desc' />
               </p>
             </div>
           </div>

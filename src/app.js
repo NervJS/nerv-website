@@ -10,6 +10,7 @@ import en from './locales/en'
 function chooseLocale () {
   const { language } = navigator
   const isChinese = language[0] + language[1] === 'zh'
+  setDocumentTitle(navigator.language)
   return isChinese ? zh : en
 }
 
@@ -18,7 +19,12 @@ addLocaleData(cnLocaleData)
 let inst
 
 export function setLanguage (locale) {
+  setDocumentTitle(locale)
   inst.setMessage(locale)
+}
+
+function setDocumentTitle (locale) {
+  document.title = 'Nerv | ' + (locale === 'zh-CN' ? '凹凸实验室' : 'O2 Labs')
 }
 
 export class App extends Nerv.Component {
