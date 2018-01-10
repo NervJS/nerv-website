@@ -4,6 +4,7 @@
  * @desc nav
  */
 import Nerv from 'nervjs'
+import { FormattedMessage } from 'react-intl'
 import Toast from '../toast/toast'
 import './nav.scss'
 
@@ -49,19 +50,35 @@ class Nav extends Nerv.Component {
   }
 
   render () {
-    const {overbanner} = this.state
+    const { overbanner } = this.state
     return (
       <div className={overbanner ? 'nav_overbanner nav' : 'nav'}>
         <Toast show={this.state.tip} />
         <div className='grid_c1'>
           <span className='nav_logo' />
           <ul className='nav_content'>
-            <li><a href='javascript:void(0)'>首页</a></li>
-            <li><a href='https://nervjs.github.io/docs'>文档</a></li>
-            <li><a href='https://github.com/NervJS/nerv' target='_blank'>GitHub</a></li>
+            <li>
+              <a href='javascript:void(0)'>
+                <FormattedMessage
+                  id='home'
+                />
+              </a>
+            </li>
+            <li>
+              <a href='https://nervjs.github.io/docs'>
+                <FormattedMessage id='docs' />
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/NervJS/nerv' target='_blank'>
+                GitHub
+              </a>
+            </li>
             <li className='nav_switch'>
               <span className='nav_switch_hide'>中</span>
-              <span onClick={this.showTip} className='nav_switch_show'>En</span>
+              <span onClick={this.showTip} className='nav_switch_show'>
+                En
+              </span>
             </li>
           </ul>
         </div>

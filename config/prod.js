@@ -10,7 +10,7 @@ module.exports = {
   module: {
     imageMin: {
       enable: true
-    },
+    }
     // postcss: {
     //   sprites: {
     //     enable: true
