@@ -58,7 +58,7 @@ class Nav extends Nerv.Component {
           <ul className='nav_content'>
             <li><a href='javascript:void(0)'>首页</a></li>
             <li><a href='https://nervjs.github.io/docs'>文档</a></li>
-            <li><a href='https://github.com/NervJS/nerv' target='_blank'>Github</a></li>
+            <li><a href='https://github.com/NervJS/nerv' target='_blank'>GitHub</a></li>
             <li className='nav_switch'>
               <span className='nav_switch_hide'>中</span>
               <span onClick={this.showTip} className='nav_switch_show'>En</span>

@@ -59,8 +59,8 @@ class Banner extends Nerv.Component {
           <h1 className='banner_tit'>Hi, I am Nerv <span onClick={this.playVideo} className='banner_play_btn' /></h1>
           <h2 className='banner_desc'>一个基于 Virtual DOM 的类 React 组件框架</h2>
           <div className='banner_btns'>
-            <a className='toDoc' href="https://nervjs.github.io/docs/">起步</a>
-            <a className='toGithub' href="https://github.com/NervJS/nerv" target='_blank'>Github</a>
+            <a className='toDoc' href='https://nervjs.github.io/docs/'>起步</a>
+            <a className='toGithub' href='https://github.com/NervJS/nerv' target='_blank'>GitHub</a>
           </div>
         </div>
         <div className='banner_quickstart'>
