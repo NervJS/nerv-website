@@ -30,6 +30,6 @@ export default {
   memory: 'The memory usege is part of JS web frameworks benchmark.',
   ui_bench: `UI Benchmark is considered a more accurate test of overall UI performance in a library. The tests were run with Full Render Time enabled and 5 Iterations. Read UI Benchmark's notes for caveats and stipulations before drawing further conclusions.`,
   db_monster: 'DB Monster is a basic app to test repaint rate of JS libraries.',
-  learn_more: 'Leran more',
+  learn_more: 'Learn more',
   time: 'The time is'
 }
