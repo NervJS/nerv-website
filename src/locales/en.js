@@ -5,7 +5,7 @@ export default {
   getting_started: 'Getting started',
   features: 'Features',
   benchmarks: 'Benchmarks',
-  examples: 'examples',
+  examples: 'Examples',
   users: 'Users',
   size: 'Tiny',
   size_desc:
