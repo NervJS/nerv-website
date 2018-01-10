@@ -4,6 +4,7 @@
  * @desc 模块标题
  */
 import Nerv from 'nervjs'
+import { FormattedMessage } from 'react-intl'
 import './cp_title.scss'
 
 class CpTitle extends Nerv.Component {
@@ -13,9 +14,13 @@ class CpTitle extends Nerv.Component {
   }
 
   render () {
-    const {data} = this.props
+    const { data } = this.props
     return (
-      <h2 className='cp_title'><span>{data}</span></h2>
+      <h2 className='cp_title'>
+        <span>
+          <FormattedMessage id={data} />
+        </span>
+      </h2>
     )
   }
 }

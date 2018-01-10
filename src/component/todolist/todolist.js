@@ -65,7 +65,7 @@ class TodoList extends Nerv.Component {
       <div className='todo'>
         <div className='todo_add'>
           <input type='text' ref='todos' onKeyDown={this.addTodoKey} onChange={this.setTodoValue} />
-          <button onClick={this.addTodoClick}>添加</button>
+          <button onClick={this.addTodoClick}>add</button>
         </div>
         <ul className='list'>
           {this.state.todos.map((item, index) => (

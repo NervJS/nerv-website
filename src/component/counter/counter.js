@@ -29,6 +29,10 @@ class Counter extends Nerv.Component {
     this.setTime()
   }
 
+  componentWillUnmount () {
+    clearInterval(this.interval)
+  }
+
   componentDidMount () {
     this.interval = setInterval(this.setTime, 1000)
   }
@@ -41,7 +45,7 @@ class Counter extends Nerv.Component {
     const { year, month, day, hour, minute, sec } = this.state
     return (
       <div className='counter'>
-        <span>现在是</span>{year}-{month}-{day} {hour}:{minute}:{sec}
+        <span>The time is </span>{year}-{month}-{day} {hour}:{minute}:{sec}
       </div>
     )
   }

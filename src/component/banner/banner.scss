@@ -87,13 +87,12 @@
       }
     }
     .toDoc {
-      float: left;
+      margin-right: 18px;
       &::before {
         background-image: url('../../static/images/icons/icon_guide.png');
       }
     }
     .toGithub {
-      float: right;
       &::before {
         background-image: url('../../static/images/icons/icon_github.png');
       }

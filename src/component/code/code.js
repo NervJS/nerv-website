@@ -20,7 +20,7 @@ class Code extends Nerv.Component {
     }
   }
 
-  switchCode = (idx) => {
+  switchCode = idx => {
     const siblings = event.target.parentNode.children
     for (let i in siblings) {
       siblings[i].className = ''
@@ -32,8 +32,7 @@ class Code extends Nerv.Component {
   }
 
   render () {
-    const codeString =
-     `import Nerv from 'nervjs'
+    const codeString = `import Nerv from 'nervjs'
 
 class Counter extends Nerv.Component {
   setTime = () => {
@@ -58,6 +57,10 @@ class Counter extends Nerv.Component {
     this.setTime()
   }
 
+  componentWillUnmount () {
+    clearInterval(this.interval)
+  }
+
   componentDidMount () {
     this.interval = setInterval(this.setTime, 1000)
   }
@@ -70,7 +73,7 @@ class Counter extends Nerv.Component {
     const { year, month, day, hour, minute, sec } = this.state
     return (
       <div className='counter'>
-        <span>现在是</span>{year}-{month}-{day} {hour}:{minute}:{sec}
+        <span>The time is</span>{year}-{month}-{day} {hour}:{minute}:{sec}
       </div>
     )
   }
@@ -78,8 +81,7 @@ class Counter extends Nerv.Component {
 
 export default Counter`
 
-    const codeString2 =
-         `import Nerv from 'nervjs'
+    const codeString2 = `import Nerv from 'nervjs'
 
 class TodoList extends Nerv.Component {
   constructor () {
@@ -137,7 +139,7 @@ class TodoList extends Nerv.Component {
       <div className='todo'>
         <div className='todo_add'>
           <input type='text' onKeyDown={this.addTodoKey} onChange={this.setTodoValue} />
-          <button onClick={this.addTodoClick}>添加</button>
+          <button onClick={this.addTodoClick}>add</button>
         </div>
         <ul className='list'>
           {this.state.todos.map((item, index) => (
@@ -153,10 +155,10 @@ class TodoList extends Nerv.Component {
 }
 
 export default TodoList`
-    const {currentIdx} = this.state
+    const { currentIdx } = this.state
     return (
       <div className='code'>
-        <CpTitle data={'代码示例 Examples'} />
+        <CpTitle data={'examples'} />
         <div className='code_examples'>
           <div className={currentIdx === 0 ? 'code_wrap show' : 'code_wrap'}>
             <SyntaxHighlighter
@@ -165,10 +167,13 @@ export default TodoList`
               customStyle={{
                 padding: '30px'
               }}
-              style={dracula}>
+              style={dracula}
+            >
               {codeString}
             </SyntaxHighlighter>
-            <div className='code_result'><Counter /></div>
+            <div className='code_result'>
+              <Counter />
+            </div>
           </div>
           <div className={currentIdx === 1 ? 'code_wrap show' : 'code_wrap'}>
             <SyntaxHighlighter
@@ -177,15 +182,27 @@ export default TodoList`
               customStyle={{
                 padding: '30px'
               }}
-              style={dracula}>
+              style={dracula}
+            >
               {codeString2}
             </SyntaxHighlighter>
-            <div className='code_result'><TodoList /></div>
+            <div className='code_result'>
+              <TodoList />
+            </div>
           </div>
         </div>
         <ul className='code_switch'>
-          <li className='current' onClick={() => { this.switchCode(0) }} />
-          <li onClick={() => { this.switchCode(1) }} />
+          <li
+            className='current'
+            onClick={() => {
+              this.switchCode(0)
+            }}
+          />
+          <li
+            onClick={() => {
+              this.switchCode(1)
+            }}
+          />
         </ul>
       </div>
     )

@@ -5,7 +5,7 @@
  */
 
 import Nerv from 'nervjs'
-import { IntlProvider } from 'react-intl'
+import { IntlProvider, addLocaleData } from 'react-intl'
 import Nav from './component/nav/nav.js'
 import Home from './view/home/home.js'
 
@@ -15,6 +15,11 @@ import en from './locales/en'
 import './static/css/global.css'
 import './static/css/base.css'
 
+addLocaleData({
+  ...en,
+  ...zh
+})
+
 function chooseLocale () {
   const { language } = navigator
   const isChinese = language[0] + language[1] === 'zh'
@@ -22,8 +27,9 @@ function chooseLocale () {
 }
 
 function App () {
+  const locale = chooseLocale()
   return (
-    <IntlProvider locale={'en'} messages={chooseLocale()}>
+    <IntlProvider locale={'en'} messages={locale}>
       <div className='main'>
         <Nav />
         <Home />

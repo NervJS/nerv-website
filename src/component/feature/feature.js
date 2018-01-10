@@ -4,6 +4,7 @@
  * @desc
  */
 import Nerv from 'nervjs'
+import { FormattedMessage } from 'react-intl'
 import './feature.scss'
 
 import CpTitle from '../cp_title/cp_title'
@@ -18,31 +19,73 @@ class Feature extends Nerv.Component {
     return (
       <div className='feature'>
         <div className='grid_c1'>
-          <CpTitle data={'特性 Features'} />
+          <CpTitle data='features' />
           <div className='feature_main'>
             <div>
-              <h3><span className='feature_icon feature_icon_tiny' /><p>更小的体积</p></h3>
-              <p className='feature_desc'>不到 React 三分之一的体积，低性能设备也能高速地加载并解析执行</p>
+              <h3>
+                <span className='feature_icon feature_icon_tiny' />
+                <p>
+                  <FormattedMessage id='size' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='size_desc' />
+              </p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_faster' /><p>更高的性能</p></h3>
-              <p className='feature_desc'>高效、同步的 diff 算法和诸多优化策略使得 Nerv 成为性能最高的前端框架之一</p>
+              <h3>
+                <span className='feature_icon feature_icon_faster' />
+                <p>
+                  <FormattedMessage id='perf' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='perf_desc' />
+              </p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_virtual' /><p>完备的生态</p></h3>
-              <p className='feature_desc'>无需 nerv-compat，只需要在稍稍设置就能享受整个 React 生态的共同成果</p>
+              <h3>
+                <span className='feature_icon feature_icon_virtual' />
+                <p>
+                  <FormattedMessage id='ecos' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='ecos_desc' />
+              </p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_types' /><p>更一致的渲染</p></h3>
-              <p className='feature_desc'>不仅在浏览器上能高效地渲染，在服务器上 Nerv 同样能高效地运行</p>
+              <h3>
+                <span className='feature_icon feature_icon_types' />
+                <p>
+                  <FormattedMessage id='isom' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='isom_desc' />
+              </p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_ie' /><p>更优的兼容</p></h3>
-              <p className='feature_desc'>和大多数现代框架不同，Nerv 将继续保持对 IE8 的兼容</p>
+              <h3>
+                <span className='feature_icon feature_icon_ie' />
+                <p>
+                  <FormattedMessage id='compat' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='compat_desc' />
+              </p>
             </div>
             <div>
-              <h3><span className='feature_icon feature_icon_tool' /><p>更具说服力的案例</p></h3>
-              <p className='feature_desc'>不管是京东首页的高流量，还是 Toplife 的复杂业务，Nerv 都经受住了来自于真实业务的考验</p>
+              <h3>
+                <span className='feature_icon feature_icon_tool' />
+                <p>
+                  <FormattedMessage id='battle' />
+                </p>
+              </h3>
+              <p className='feature_desc'>
+                <FormattedMessage id='battle_desc' />
+              </p>
             </div>
           </div>
         </div>

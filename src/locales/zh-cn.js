@@ -1,12 +1,14 @@
 export default {
   home: '首页',
+  docs: '文档',
   banner_desc: '一个基于 Virtual DOM 的类 React 组件框架',
   getting_started: '起步',
   features: '特性 Features',
   benchmarks: '性能 Benchmarks',
   users: '使用者 Users',
+  examples: '代码示例 Examples',
   size: '更小的体积',
-  side_desc: '不到 React 三分之一的体积，低性能设备也能高速地加载并解析执行',
+  size_desc: '不到 React 三分之一的体积，低性能设备也能高速地加载并解析执行',
   perf: '更高的性能',
   perf_desc:
     '高效、同步的 diff 算法和诸多优化策略使得 Nerv 成为性能最高的前端框架之一',
@@ -28,5 +30,6 @@ export default {
     '本例子使用UI Benchmark对比若干JS框架的渲染速度，相同测试用例下，nerv的渲染耗时最短。',
   db_monster:
     '我们增加了UI渲染性能这个维度来体现nerv在各方面变现的优秀性。对比与其他框架，nerv的fps高达160帧/秒，如此高的渲染性能，实现丝滑般体验的动画效果将不再是件难事。',
-  learn_more: '了解更多'
+  learn_more: '了解更多',
+  time: '现在的时间是'
 }

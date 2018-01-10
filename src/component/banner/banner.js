@@ -5,6 +5,8 @@
  */
 import Nerv from 'nervjs'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import { isLocaleChinese } from '../../util'
+import { FormattedMessage } from 'react-intl'
 import Toast from '../toast/toast'
 import Video from '../video/video'
 import { androidstudio } from 'react-syntax-highlighter/styles/hljs'
@@ -48,19 +50,32 @@ class Banner extends Nerv.Component {
   }
 
   render () {
+    const isCn = isLocaleChinese.call(this)
     return (
       <div className='banner'>
         <div className='banner_main'>
           <Toast show={this.state.tip} />
-          <Video
-            play={this.state.play}
-            pause={this.stopVideo}
-          />
-          <h1 className='banner_tit'>Hi, I am Nerv <span onClick={this.playVideo} className='banner_play_btn' /></h1>
-          <h2 className='banner_desc'>一个基于 Virtual DOM 的类 React 组件框架</h2>
+          <Video play={this.state.play} pause={this.stopVideo} />
+          <h1 className='banner_tit'>
+            Hi, I am Nerv{' '}
+            {isCn && <span onClick={this.playVideo} className='banner_play_btn' />}
+          </h1>
+          <h2 className='banner_desc'>
+            <FormattedMessage id='banner_desc' />
+          </h2>
           <div className='banner_btns'>
-            <a className='toDoc' href='https://nervjs.github.io/docs/'>起步</a>
-            <a className='toGithub' href='https://github.com/NervJS/nerv' target='_blank'>GitHub</a>
+            {isCn && (
+              <a className='toDoc' href='https://nervjs.github.io/docs/'>
+                起步
+              </a>
+            )}
+            <a
+              className='toGithub'
+              href='https://github.com/NervJS/nerv'
+              target='_blank'
+            >
+              GitHub
+            </a>
           </div>
         </div>
         <div className='banner_quickstart'>
@@ -71,7 +86,8 @@ class Banner extends Nerv.Component {
               borderRadius: '4px',
               padding: '30px'
             }}
-            style={androidstudio}>
+            style={androidstudio}
+          >
             {`/** Quick Start With NPM **/
 npm install nervjs --save
               `}
