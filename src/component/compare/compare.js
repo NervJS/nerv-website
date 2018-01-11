@@ -18,7 +18,7 @@ class Compare extends Nerv.Component {
         // js bench
         {
           xItem: [
-            { name: 'PReact', val: 1.25 },
+            { name: 'preact', val: 1.25 },
             { name: 'React 15.4', val: 1.26 },
             { name: 'React 16.0', val: 1.17 },
             { name: 'Nerv', val: 1.06, nerv: true },
@@ -37,7 +37,7 @@ class Compare extends Nerv.Component {
         // memory
         {
           xItem: [
-            { name: 'PReact', val: 1.37 },
+            { name: 'preact', val: 1.37 },
             { name: 'React 15.4', val: 1.55 },
             { name: 'React 16.0', val: 1.45 },
             { name: 'Nerv', val: 1.14, nerv: true },
@@ -56,7 +56,7 @@ class Compare extends Nerv.Component {
         // ui bench
         {
           xItem: [
-            { name: 'PReact', val: 2.26 },
+            { name: 'preact', val: 2.26 },
             { name: 'React 15.4', val: 1.7 },
             { name: 'React 16.0', val: 1.47 },
             { name: 'Nerv', val: 1.1, nerv: true },
@@ -74,7 +74,7 @@ class Compare extends Nerv.Component {
         // fps
         {
           xItem: [
-            { name: 'PReact', val: 150 },
+            { name: 'preact', val: 150 },
             { name: 'React', val: 80 },
             { name: 'Angular', val: 70 },
             { name: 'Nerv', val: 160, nerv: true },

@@ -12,7 +12,7 @@ class BarGraph extends Nerv.Component {
     super(...arguments)
     this.state = {
       xItem: [
-        { name: 'PReact', val: 1.25 },
+        { name: 'preact', val: 1.25 },
         { name: 'React 15.4', val: 1.26 },
         { name: 'React 16.0', val: 1.17 },
         { name: 'Nerv', val: 1.06, nerv: true },
