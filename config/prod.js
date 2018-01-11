@@ -1,5 +1,7 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 module.exports = {
-  publicPath: '/',
+  publicPath: '//nerv.aotu.io/',
   // environment variables
   env: {
     NODE_ENV: '"production"'
@@ -16,5 +18,12 @@ module.exports = {
     //     enable: true
     //   }
     // }
+  },
+  webpack: {
+    plugins: [
+      new CopyWebpackPlugin([
+        { from: 'src/favicon.ico', to: 'favicon.ico' }
+      ])
+    ]
   }
 }
