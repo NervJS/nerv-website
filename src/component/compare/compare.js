@@ -96,7 +96,7 @@ class Compare extends Nerv.Component {
 
   componentDidMount () {}
 
-  setCurrentIdx = idx => {
+  setCurrentIdx (idx, event) {
     const tg = event.target
     const siblings = tg.parentNode.parentNode.children
     for (let i in siblings) {
@@ -119,33 +119,25 @@ class Compare extends Nerv.Component {
               <li
                 key='0'
                 className='current'
-                onClick={() => {
-                  this.setCurrentIdx(0)
-                }}
+                onClick={this.setCurrentIdx.bind(this, 0)}
               >
                 <span className='compare_js'>JS Framework</span>
               </li>
               <li
                 key='1'
-                onClick={() => {
-                  this.setCurrentIdx(1)
-                }}
+                onClick={this.setCurrentIdx.bind(this, 1)}
               >
                 <span className='compare_mu'>Memory usage</span>
               </li>
               <li
                 key='2'
-                onClick={() => {
-                  this.setCurrentIdx(2)
-                }}
+                onClick={this.setCurrentIdx.bind(this, 2)}
               >
                 <span className='compare_ui'>UI Bench</span>
               </li>
               <li
                 key='3'
-                onClick={() => {
-                  this.setCurrentIdx(3)
-                }}
+                onClick={this.setCurrentIdx.bind(this, 3)}
               >
                 <span className='compare_db'>DB Monster (fps)</span>
               </li>
