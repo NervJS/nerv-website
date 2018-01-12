@@ -1,7 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  publicPath: '//nerv.aotu.io/',
+  publicPath: '//storage.jd.com/nerv-static/',
   // environment variables
   env: {
     NODE_ENV: '"production"'
