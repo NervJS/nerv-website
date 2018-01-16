@@ -20,7 +20,7 @@ class Code extends Nerv.Component {
     }
   }
 
-  switchCode = idx => {
+  switchCode (idx, event) {
     const siblings = event.target.parentNode.children
     for (let i in siblings) {
       siblings[i].className = ''
@@ -194,14 +194,10 @@ export default TodoList`
         <ul className='code_switch'>
           <li
             className='current'
-            onClick={() => {
-              this.switchCode(0)
-            }}
+            onClick={this.switchCode.bind(this, 0)}
           />
           <li
-            onClick={() => {
-              this.switchCode(1)
-            }}
+            onClick={this.switchCode.bind(this, 1)}
           />
         </ul>
       </div>
