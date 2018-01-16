@@ -1,3 +1,3 @@
 # nerv-website
 
-The official website for Nerv
+The landing page of Nerv, building with [Athena2](https://github.com/o2team/athena2).
