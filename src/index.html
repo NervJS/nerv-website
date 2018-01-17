@@ -10,7 +10,9 @@
   </head>
   <body>
     <div id="J_container">
-
     </div>
+    <% if (htmlWebpackPlugin.options.vendorFiles) {for (let i = 0; i < htmlWebpackPlugin.options.vendorFiles.length; ++i) { %>
+      <script src="<%= htmlWebpackPlugin.options.vendorFiles[i] %>"></script>
+    <% }} %>
   </body>
 </html>

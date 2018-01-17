@@ -11,6 +11,21 @@ const config = {
   // define global constants for application see https://webpack.js.org/plugins/define-plugin/
   defineConstants: {
   },
+  htmlSnippetDirectory: [
+    'component',
+    'view'
+  ],
+  library: {
+    name: 'base',
+    directory: 'lib',
+    libs: [
+      'intl',
+      'nervjs',
+      'react-hljs',
+      'react-intl',
+      'react-syntax-highlighter'
+    ]
+  },
   // support functions
   module: {
     postcss: {
