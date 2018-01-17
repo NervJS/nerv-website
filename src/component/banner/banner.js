@@ -55,7 +55,7 @@ class Banner extends Nerv.Component {
           <Toast show={this.state.tip} />
           <Video play={this.state.play} pause={this.stopVideo} />
           <h1 className='banner_tit'>
-            Hi, I am Nerv{' '}
+            Hi, I'm Nerv{' '}
             {isCn && <span onClick={this.playVideo} className='banner_play_btn' />}
           </h1>
           <h2 className='banner_desc'>
