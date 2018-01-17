@@ -1,7 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  publicPath: '//storage.jd.com/nerv-static/',
+  publicPath: '//storage.360buyimg.com/nerv-static/',
   // environment variables
   env: {
     NODE_ENV: '"production"'
