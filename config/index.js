@@ -20,10 +20,7 @@ const config = {
     directory: 'lib',
     libs: [
       'intl',
-      'nervjs',
-      'react-hljs',
-      'react-intl',
-      'react-syntax-highlighter'
+      'nervjs'
     ]
   },
   // support functions

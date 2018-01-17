@@ -4,12 +4,9 @@
   "private": true,
   "dependencies": {
     "intl": "^1.2.5",
-    "nervjs": "^1.2.2",
-    "react-highlight": "^0.10.0",
-    "react-highlight.js": "^1.0.7",
+    "nervjs": "^1.2.5-beta.3",
     "react-hljs": "^1.0.0",
     "react-intl": "^2.4.0",
-    "react-router-dom": "^4.2.2",
     "react-syntax-highlighter": "^6.0.4"
   },
   "scripts": {

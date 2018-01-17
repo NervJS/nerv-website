@@ -12,6 +12,7 @@ module.exports = {
     }
   },
   rules: {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "Nerv", "args": "after-used", "ignoreRestSiblings": false }],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
