@@ -88,7 +88,6 @@ const CopyrightLoadable = Loadable({
 
 const lazyloadOptions = {
   offset: 200,
-  once: true,
   placeholderClassName: 'mod_lazyload'
 }
 

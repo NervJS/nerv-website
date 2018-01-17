@@ -7,7 +7,7 @@
 import Nerv from 'nervjs'
 import { App } from './app'
 
-import './static/css/global.css'
+import './static/css/global.scss'
 import './static/css/base.css'
 
 Nerv.render(<App />, document.getElementById('J_container'))
