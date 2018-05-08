@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "intl": "^1.2.5",
-    "nervjs": "^1.2.5-beta.3",
+    "nervjs": "^1.2.18",
     "react-hljs": "^1.0.0",
     "react-intl": "^2.4.0",
     "react-syntax-highlighter": "^6.0.4"
