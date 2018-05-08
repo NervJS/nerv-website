@@ -109,7 +109,7 @@ class LazyLoad extends Nerv.Component {
     }
     let parent
     if (overflow) {
-      parent = getScrollParent(this.dom)
+      parent = getScrollParent(Nerv.findDOMNode(this))
     }
     if (parent && parent !== window) {
       if (parent.getAttribute) {
@@ -154,7 +154,7 @@ class LazyLoad extends Nerv.Component {
   componentWillUnmount () {
     const w = window
     if (this.props.overflow) {
-      const parent = getScrollParent(this.dom)
+      const parent = getScrollParent(Nerv.findDOMNode(this))
       if (parent && parent.getAttribute) {
         const listenerCount = parent.getAttribute(LISTEN_FLAG) | 0 - 1
         if (listenerCount === 0) {
@@ -213,7 +213,7 @@ function clearOnce () {
 }
 
 function checkVisible (component) {
-  const domNode = component.dom
+  const domNode = Nerv.findDOMNode(component)
   if (!domNode) {
     return
   }
@@ -244,7 +244,7 @@ function checkVisible (component) {
 }
 
 function checkOverflowVisible (component, parent) {
-  const domNode = component.dom
+  const domNode = Nerv.findDOMNode(component)
   let parentTop
   let parentHeight
 
@@ -270,7 +270,7 @@ function checkOverflowVisible (component, parent) {
 }
 
 function checkNormalVisible (component) {
-  const domNode = component.dom
+  const domNode = Nerv.findDOMNode(component)
   if (!(domNode.offsetWidth || domNode.offsetHeight || (domNode.getClientRects && domNode.getClientRects().length))) {
     return false
   }
